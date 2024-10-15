@@ -32,10 +32,10 @@ Aqui está a versão corrigida do seu README:
 
 ### Dados:
 
-[![Static Badge](https://img.shields.io/badge/Dados%20brutos-Link-green?style=for-the-badge&logo=googlesheets)](https://drive.google.com/file/d/1rgLAqDoHC7eZZahOMdqj73MTfpN2nGaA/view?usp=sharing) 
-[![Static Badge](https://img.shields.io/badge/Edital%20do%20projeto-PDF-red?style=for-the-badge&logo=files&logoColor=red)](https://github.com/SU4NE/VII-Desafio-em-Ciencia-de-Dados/blob/readme/Roteiro/Edital-VII%20DESAFIO-CIÊNCIA%20DOS%20DADOS-VF-2024-2%20(1).pdf) 
-[![Static Badge](https://img.shields.io/badge/Roteiro%20do%20projeto-PDF-red?style=for-the-badge&logo=files&logoColor=red)](https://github.com/SU4NE/VII-Desafio-em-Ciencia-de-Dados/blob/readme/Roteiro/Roteiro%20para%20análise%20dos%20dados%20%20desafio%20V%20%20completo_1510.pdf) 
-[![Static Badge](https://img.shields.io/badge/Space%20Weather%20-PDF-red?style=for-the-badge&logo=files&logoColor=red)](https://github.com/SU4NE/VII-Desafio-em-Ciencia-de-Dados/blob/readme/Roteiro/Space%20Weather%20-%202023%20-%20Nair%20-%20MagNet%20A%20Data‐Science%20Competition%20to%20Predict%20Disturbance%20Storm‐Time%20Inde.pdf) 
+[![Static Badge](https://img.shields.io/badge/Dados%20brutos-Link-green?style=for-the-badge&logo=googlesheets)](https://drive.google.com/file/d/1rgLAqDoHC7eZZahOMdqj73MTfpN2nGaA/view?usp=sharing)
+[![Static Badge](https://img.shields.io/badge/Edital%20do%20projeto-PDF-red?style=for-the-badge&logo=files&logoColor=red)](<https://github.com/SU4NE/VII-Desafio-em-Ciencia-de-Dados/blob/readme/Roteiro/Edital-VII%20DESAFIO-CIÊNCIA%20DOS%20DADOS-VF-2024-2%20(1).pdf>)
+[![Static Badge](https://img.shields.io/badge/Roteiro%20do%20projeto-PDF-red?style=for-the-badge&logo=files&logoColor=red)](https://github.com/SU4NE/VII-Desafio-em-Ciencia-de-Dados/blob/readme/Roteiro/Roteiro%20para%20análise%20dos%20dados%20%20desafio%20V%20%20completo_1510.pdf)
+[![Static Badge](https://img.shields.io/badge/Space%20Weather%20-PDF-red?style=for-the-badge&logo=files&logoColor=red)](https://github.com/SU4NE/VII-Desafio-em-Ciencia-de-Dados/blob/readme/Roteiro/Space%20Weather%20-%202023%20-%20Nair%20-%20MagNet%20A%20Data‐Science%20Competition%20to%20Predict%20Disturbance%20Storm‐Time%20Inde.pdf)
 [![Static Badge](https://img.shields.io/badge/Dicionário%20de%20dados-PDF-red?style=for-the-badge&logo=files&logoColor=red)](https://github.com/SU4NE/VII-Desafio-em-Ciencia-de-Dados/blob/readme/Roteiro/dicionário%20de%20dados%20-%20VII%20desafio%20CD%202024.pdf)
 
 ### Código:
@@ -78,7 +78,7 @@ A implementação do desafio foi dividida em várias etapas para lidar com os da
 
    - **Outliers e Eventos Extremos:**
      Quedas significativas, como as observadas no segmento em vermelho, podem ser classificadas como outliers ou eventos raros. Esses pontos geralmente representam grandes tempestades geomagnéticas.
-  
+
    - **Segmentação e Transições:**
      As transições entre os períodos `Trem A`, `Trem B` e `Trem C` indicam diferentes fases ao longo do tempo.
 
@@ -86,9 +86,9 @@ A implementação do desafio foi dividida em várias etapas para lidar com os da
 
 A tabela abaixo mostra a quantidade de dados disponíveis para cada período (`train_a`, `train_b`, `train_c`):
 
-| Período   | Train A      | Train B      | Train C      |
-|-----------|--------------|--------------|--------------|
-| Contagem  | 1.575.012    | 3.084.130    | 3.407.290    |
+| Período  | Train A   | Train B   | Train C   |
+| -------- | --------- | --------- | --------- |
+| Contagem | 1.575.012 | 3.084.130 | 3.407.290 |
 
 ### 4. Normalização de Colunas:
 
@@ -101,15 +101,15 @@ A tabela abaixo mostra a quantidade de dados disponíveis para cada período (`t
 3. **Ajuste da Frequência dos Dados:**
    Os dados da variável `dst` são coletados com frequência horária, enquanto os dados de `solar_wild` são coletados a cada minuto. Para ajustar essa diferença de granularidade, foi calculada a média e o desvio padrão dos dados de `solar_wild` para intervalos de uma hora. O resultado é apresentado na tabela a seguir, onde cada linha representa a média e o desvio padrão para as variáveis nesse período:
 
-| Período     | bx_gse_mean | bx_gse_std | by_gse_mean | by_gse_std | bz_gse_mean | bz_gse_std | bt_mean | bt_std | density_mean | density_std | speed_mean | speed_std | temperature_mean | temperature_std | smoothed_ssn |
-|-------------|-------------|------------|-------------|------------|-------------|------------|---------|--------|--------------|-------------|------------|-----------|------------------|-----------------|--------------|
-| 0h00min     | -1.495610   | 0.195616   | 0.386310    | 0.308088   | 0.258776    | 0.173041   | 0.493174| 0.516734| -0.738481    | 0.114659    | -0.735688  | 0.156490  | -0.365926        | 0.292884        | 65.4         |
-| 1h00min     | -1.643940   | 0.084074   | 0.165197    | 0.228181   | 0.384224    | 0.218164   | 0.539745| 0.104596| -0.820192    | 0.162933    | -0.982174  | 0.168136  | -0.463491        | 0.446460        | 65.4         |
-| 2h00min     | -1.787911   | 0.027512   | 0.168886    | 0.083961   | 0.663165    | 0.097176   | 0.728812| 0.020311| -0.805470    | 0.109983    | -1.008617  | 0.129389  | -0.552849        | 0.137358        | 65.4         |
-| 3h00min     | -1.691628   | 0.103505   | -0.347757   | 0.389272   | 0.534932    | 0.294993   | 0.688780| 0.096223| -0.384938    | 0.253449    | -0.822949  | 0.062148  | -0.318572        | 0.277114        | 65.4         |
-| 4h00min     | -1.252354   | 0.171895   | 0.067172    | 0.568129   | 0.402752    | 0.231604   | 0.222640| 0.104505| -0.353707    | 0.213811    | -0.599416  | 0.169979  | -0.308009        | 0.243689        | 65.4         |
+| Período | bx_gse_mean | bx_gse_std | by_gse_mean | by_gse_std | bz_gse_mean | bz_gse_std | bt_mean  | bt_std   | density_mean | density_std | speed_mean | speed_std | temperature_mean | temperature_std | smoothed_ssn |
+| ------- | ----------- | ---------- | ----------- | ---------- | ----------- | ---------- | -------- | -------- | ------------ | ----------- | ---------- | --------- | ---------------- | --------------- | ------------ |
+| 0h00min | -1.495610   | 0.195616   | 0.386310    | 0.308088   | 0.258776    | 0.173041   | 0.493174 | 0.516734 | -0.738481    | 0.114659    | -0.735688  | 0.156490  | -0.365926        | 0.292884        | 65.4         |
+| 1h00min | -1.643940   | 0.084074   | 0.165197    | 0.228181   | 0.384224    | 0.218164   | 0.539745 | 0.104596 | -0.820192    | 0.162933    | -0.982174  | 0.168136  | -0.463491        | 0.446460        | 65.4         |
+| 2h00min | -1.787911   | 0.027512   | 0.168886    | 0.083961   | 0.663165    | 0.097176   | 0.728812 | 0.020311 | -0.805470    | 0.109983    | -1.008617  | 0.129389  | -0.552849        | 0.137358        | 65.4         |
+| 3h00min | -1.691628   | 0.103505   | -0.347757   | 0.389272   | 0.534932    | 0.294993   | 0.688780 | 0.096223 | -0.384938    | 0.253449    | -0.822949  | 0.062148  | -0.318572        | 0.277114        | 65.4         |
+| 4h00min | -1.252354   | 0.171895   | 0.067172    | 0.568129   | 0.402752    | 0.231604   | 0.222640 | 0.104505 | -0.353707    | 0.213811    | -0.599416  | 0.169979  | -0.308009        | 0.243689        | 65.4         |
 
-### 5. Treinamento do Modelo:
+### 5. Treinamento do Modelo
 
 1. **Divisão dos Dados:**
    Os dados foram cuidadosamente separados em conjuntos `X_train`, `X_val` e `X_test`, garantindo que cada um dos três períodos (`train_a`, `train_b`, `train_c`) estivesse representado de maneira balanceada em todas as partes do conjunto de dados.
@@ -117,20 +117,41 @@ A tabela abaixo mostra a quantidade de dados disponíveis para cada período (`t
    ![Distribuição](https://github.com/SU4NE/VII-Desafio-em-Ciencia-de-Dados/blob/main/images/Distribution.png)
 
 2. **Arquitetura do Modelo:**
-   Utilizamos uma combinação de diferentes tipos de camadas, incluindo `LSTM`, `Dense`, `GRU`, `Dropout`, `Bidirectional`, `Conv1D` e `MaxPooling1D`, para analisar séries temporais com um timestep de 128. A tabela abaixo descreve as camadas do modelo e a quantidade de parâmetros em cada uma delas:
+   Utilizamos uma combinação de diferentes tipos de camadas, incluindo `LSTM`, `Dense`, `GRU`, `Dropout`, `Bidirectional`, `Conv1D`, `BatchNormalization` e `MaxPooling1D`. As tabelas abaixo descrevem as camadas dos modelos testados e a quantidade de parâmetros em cada uma delas:
 
- 
-  | Camada (tipo)             | Forma de Saída         | N° de Parâmetros |
-  |---------------------------|------------------------|------------------|
-  | conv1d (Conv1D)           | (None, 126, 64)        | 2,944            |
-  | dropout (Dropout)         | (None, 126, 64)        | 0                |
-  | max_pooling1d (MaxPooling1D) | (None, 63, 64)      | 0                |
-  | lstm (LSTM)               | (None, 63, 64)         | 33,024           |
-  | bidirectional (Bidirectional) | (None, 64)         | 18,816           |
-  | dropout_1 (Dropout)       | (None, 64)             | 0                |
-  | dense (Dense)             | (None, 32)             | 2,080            |
-  | dense_1 (Dense)           | (None, 16)             | 528              |
-  | dense_2 (Dense)           | (None, 1)              | 17               |
-  
-  
-  Essa arquitetura foi escolhida para capturar padrões complexos nas séries temporais e melhorar o desempenho do modelo em diferentes tipos de dados de entrada.
+   #### Modelo 1:
+
+   | Layer (type)                  | Output Shape    | Param # |
+   | ----------------------------- | --------------- | ------- |
+   | conv1d (Conv1D)               | (None, 126, 64) | 2,944   |
+   | dropout (Dropout)             | (None, 126, 64) | 0       |
+   | max_pooling1d (MaxPooling1D)  | (None, 63, 64)  | 0       |
+   | lstm (LSTM)                   | (None, 63, 64)  | 33,024  |
+   | bidirectional (Bidirectional) | (None, 64)      | 18,816  |
+   | dropout_1 (Dropout)           | (None, 64)      | 0       |
+   | dense (Dense)                 | (None, 32)      | 2,080   |
+   | dense_1 (Dense)               | (None, 16)      | 528     |
+   | dense_2 (Dense)               | (None, 1)       | 17      |
+
+   #### Modelo 2:
+
+   | Layer (type)                               | Output Shape   | Param # |
+   | ------------------------------------------ | -------------- | ------- |
+   | conv1d_2 (Conv1D)                          | (None, 13, 64) | 256     |
+   | max_pooling1d_2 (MaxPooling1D)             | (None, 6, 64)  | 0       |
+   | bidirectional_4 (Bidirectional)            | (None, 6, 256) | 197,632 |
+   | dropout_6 (Dropout)                        | (None, 6, 256) | 0       |
+   | batch_normalization_2 (BatchNormalization) | (None, 6, 256) | 1,024   |
+   | bidirectional_5 (Bidirectional)            | (None, 256)    | 296,448 |
+   | dropout_7 (Dropout)                        | (None, 256)    | 0       |
+   | dense_4 (Dense)                            | (None, 128)    | 32,896  |
+   | dropout_8 (Dropout)                        | (None, 128)    | 0       |
+   | dense_5 (Dense)                            | (None, 1)      | 129     |
+
+Essas arquiteturas foram selecionadas para capturar padrões complexos nas séries temporais e melhorar o desempenho do modelo em diferentes tipos de dados de entrada.
+
+### 6. Resultados
+
+Com base nas análises, podemos concluir que o modelo **Modelo 3** é altamente eficaz na previsão do Dst. Seus resultados sugerem que ele é capaz de fornecer previsões precisas.
+
+O modelo atingiu um RMSE satisfatório, destacando a importância de um bom pré-processamento dos dados, que pode melhorar significativamente a precisão do modelo. No entanto, é fundamental manter a vigilância contínua do desempenho e realizar ajustes quando necessário para garantir a eficácia contínua da ferramenta.
