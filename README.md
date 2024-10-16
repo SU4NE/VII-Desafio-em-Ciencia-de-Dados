@@ -40,7 +40,7 @@ Aqui está a versão corrigida do seu README:
 
 ### Código:
 
-[![Static Badge](https://img.shields.io/badge/C%C3%B3digo%20do%20projeto-Link-orange?style=for-the-badge&logo=googlecolab)](https://colab.research.google.com/drive/1zkg6qAswrBDa1mRZnpakQDoR1mxd-gDu?usp=sharing)
+[![Static Badge](https://img.shields.io/badge/C%C3%B3digo%20do%20projeto-Link-orange?style=for-the-badge&logo=googlecolab)](https://github.com/SU4NE/VII-Desafio-em-Ciencia-de-Dados/blob/main/test%20colabs/random_forest%5B2%5D.ipynb)
 
 ## Implementação:
 
