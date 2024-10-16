@@ -112,14 +112,14 @@ A tabela abaixo mostra a quantidade de dados disponíveis para cada período (`t
 ### 5. Treinamento do Modelo
 
 1. **Divisão dos Dados:**
-   Os dados foram cuidadosamente separados em conjuntos `X_train`, `X_val` e `X_test`, garantindo que cada um dos três períodos (`train_a`, `train_b`, `train_c`) estivesse representado de maneira balanceada em todas as partes do conjunto de dados.
+   Os dados foram cuidadosamente divididos nos conjuntos `X_train`, `X_val`, e `X_test`, assegurando que os três períodos (`train_a`, `train_b`, `train_c`) estivessem distribuídos de maneira equilibrada em todas as partes do dataset.
 
    ![Distribuição](https://github.com/SU4NE/VII-Desafio-em-Ciencia-de-Dados/blob/main/images/Distribution.png)
 
 2. **Arquitetura do Modelo:**
-   Utilizamos uma combinação de diferentes tipos de camadas, incluindo `LSTM`, `Dense`, `GRU`, `Dropout`, `Bidirectional`, `Conv1D`, `BatchNormalization` e `MaxPooling1D`. As tabelas abaixo descrevem as camadas dos modelos testados e a quantidade de parâmetros em cada uma delas:
+   Uma combinação de diferentes tipos de camadas foi utilizada, incluindo `LSTM`, `Dense`, `GRU`, `Dropout`, `Bidirectional`, `Conv1D`, `BatchNormalization` e `MaxPooling1D`. As tabelas a seguir descrevem as camadas dos modelos testados e o número de parâmetros em cada uma delas:
 
-   #### Modelo 1:
+   #### Modelo 1: Arquitetura Sequencial com LSTM e Camadas Conv1D
 
    | Layer (type)                  | Output Shape    | Param # |
    | ----------------------------- | --------------- | ------- |
@@ -133,7 +133,7 @@ A tabela abaixo mostra a quantidade de dados disponíveis para cada período (`t
    | dense_1 (Dense)               | (None, 16)      | 528     |
    | dense_2 (Dense)               | (None, 1)       | 17      |
 
-   #### Modelo 2:
+   #### Modelo 2: Arquitetura Bidirecional com GRU
 
    | Layer (type)                               | Output Shape   | Param # |
    | ------------------------------------------ | -------------- | ------- |
@@ -148,10 +148,20 @@ A tabela abaixo mostra a quantidade de dados disponíveis para cada período (`t
    | dropout_8 (Dropout)                        | (None, 128)    | 0       |
    | dense_5 (Dense)                            | (None, 1)      | 129     |
 
-Essas arquiteturas foram selecionadas para capturar padrões complexos nas séries temporais e melhorar o desempenho do modelo em diferentes tipos de dados de entrada.
+   #### Modelo 3: CatBoost
+
+Essas arquiteturas foram escolhidas para capturar padrões complexos em séries temporais e melhorar o desempenho do modelo com diferentes tipos de dados de entrada.
+
+---
 
 ### 6. Resultados
 
-Com base nas análises, podemos concluir que o modelo **Modelo 3** é altamente eficaz na previsão do Dst. Seus resultados sugerem que ele é capaz de fornecer previsões precisas.
+Com base nas análises, o **Modelo 3 (CatBoost)** demonstrou alta eficácia na previsão do Dst. Seus resultados indicam que ele é capaz de fornecer previsões precisas e consistentes.
 
-O modelo atingiu um RMSE satisfatório, destacando a importância de um bom pré-processamento dos dados, que pode melhorar significativamente a precisão do modelo. No entanto, é fundamental manter a vigilância contínua do desempenho e realizar ajustes quando necessário para garantir a eficácia contínua da ferramenta.
+O modelo alcançou métricas satisfatórias, conforme descrito abaixo:
+
+| Modelo   | R²       | RMSE     | MAE      |
+| -------- | -------- | -------- | -------- |
+| CatBoost | 0.649063 | 7.961570 | 5.826377 |
+
+Esses resultados ressaltam a importância do pré-processamento dos dados, que pode melhorar significativamente a precisão do modelo. Contudo, é fundamental monitorar continuamente o desempenho do modelo e realizar ajustes conforme necessário, garantindo que ele permaneça uma ferramenta eficaz para previsões de Dst.
