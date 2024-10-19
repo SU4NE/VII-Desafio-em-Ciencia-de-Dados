@@ -1,4 +1,4 @@
-# VII Desafio em Ciência de Dados
+# (2nd Place) VII Desafio em Ciência de Dados
 
 ## Equipe
 
