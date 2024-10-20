@@ -1,6 +1,9 @@
 # (2nd Place) VII Desafio em Ciência de Dados
+## Predição do Impacto das Explosões Solares no Clima Terrestre usando Técnicas de Machine Learning
 
 ## Equipe
+
+
 
 <div>
   
